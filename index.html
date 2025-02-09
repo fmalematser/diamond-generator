@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prank Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="welcomeScreen">
+        <h1>Welcome to the Generator!</h1>
+        <button class="generateBtn" onclick="showInputScreen('diamonds')">Generate Diamonds</button>
+        <button class="generateBtn" onclick="showInputScreen('robux')">Generate Robux</button>
+        <button class="generateBtn" onclick="showInputScreen('vbucks')">Generate V-Bucks</button>
+    </div>
+
+    <div id="inputScreen" style="display:none;">
+        <h2>Enter Your Player ID:</h2>
+        <input type="text" id="playerId" placeholder="Enter ID" />
+        <button onclick="showConfirmScreen()">Confirm</button>
+    </div>
+
+    <div id="confirmScreen" style="display:none;">
+        <h2>Is this your correct ID?</h2>
+        <p id="displayId"></p>
+        <button onclick="startLoading()">Yes, Confirm</button>
+    </div>
+
+    <div id="loadingScreen" style="display:none;">
+        <h2>Processing...</h2>
+        <div class="loader"></div>
+    </div>
+
+    <div id="successScreen" style="display:none;">
+        <h2>Success!</h2>
+        <p>Your diamonds will be sent in 10 years! ⏳</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
